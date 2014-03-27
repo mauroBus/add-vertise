@@ -2,11 +2,16 @@ define([
   'backbone',
   'jquery',
   'marionette',
-  'helpers/url'
-], function(Backbone, $, Marionette, Url) {
+  'helpers/url',
+  'views/home/index'
+], function(Backbone, $, Marionette, Url, MainView) {
   'use strict';
 
   var app = new Marionette.Application();
+
+  app.addRegions({
+    mainRegion: '.app-main-region'
+  });
 
   // Register composer as part of the application namespace
   // app.composer = composer()
@@ -17,12 +22,15 @@ define([
   // Retrieve initial app information
   //Set Role based on current logged in user
   app.addInitializer(function() {
+    var mainView = new MainView();
 
     // Backbone History initialization
     Backbone.history.start({
       pushState: false,
       root: Url.getRoot()
     });
+
+    app.mainRegion.show(mainView);
 
   });
 

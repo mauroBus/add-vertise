@@ -3,7 +3,7 @@ define(function() {
     var root = 'mocks';
 
     return {
-        'posts': root + '/posts.json',
+        'advertises': root + '/advertises.json',
         getRoot: function() {
             return root;
         }

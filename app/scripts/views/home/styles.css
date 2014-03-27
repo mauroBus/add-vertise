@@ -1,0 +1,22 @@
+.header-region {
+  background-color: lightgray;
+}
+
+.sideBar-region,
+.mainContent-region {
+  float: left;
+}
+
+.mainContent-region {
+  width: 80%;
+  background-color: lightsalmon;
+}
+
+.sideBar-region {
+  width: 20%;
+  background-color: khaki;
+}
+
+.footer-region {
+  background-color: lightgray;
+}
