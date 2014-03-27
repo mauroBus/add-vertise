@@ -2,10 +2,9 @@ define([
   'jquery',
   'marionette',
   'jst!./_index.html',
-  'collections/advertise.collection',
   'views/advertise/index'
   ],
-  function($, Marionette, Tpl, AdvertiseCollection, AdvertiseView) {
+  function($, Marionette, Tpl, AdvertiseView) {
   'use strict';
 
   var MainContentView = Marionette.CollectionView.extend({
@@ -15,8 +14,7 @@ define([
     itemView: AdvertiseView,
 
     initialize: function(options) {
-      this.collection = new AdvertiseCollection();
-      this.collection.fetch();
+      this.collection = options.collection;
     }
   });
 

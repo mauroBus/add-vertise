@@ -25,7 +25,9 @@ define([
       var headerView = new HeaderView();
       this.header.show(headerView);
 
-      var mainContentView = new MainContentView();
+      var mainContentView = new MainContentView({
+        collection: this.options.collection
+      });
       this.mainContent.show(mainContentView);
 
       var sideBarView = new SideBarView();
