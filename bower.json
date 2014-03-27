@@ -1,0 +1,16 @@
+{
+  "name": "add-vertise",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
+  "devDependencies": {
+    "requirejs": "~2.1.11",
+    "underscore": "~1.6.0",
+    "backbone": "~1.1.2",
+    "marionette": "~1.7.2",
+    "text": "~2.0.10",
+    "jst": "https://github.com/ahutchings/require-jst.git#9a36583646eb6b4cfeb6fc2da3360365b06f52b7"
+  }
+}
