@@ -1,1 +1,86 @@
-<p>HEADER</p>
+<div id="header" class="navbar navbar-top">
+  <div class="navbar-inner">
+    <div class="container container-full-width page-container">
+      <a href="/" class="brand airbnb">Airbnb</a>
+      <ul class="nav">
+        <li>
+          <span class="search-header">
+            <input name="location" type="text" value="Londres, Reino Unido" class="location" placeholder="¿A dónde vas?" autocomplete="off">
+            <button type="submit" class="btn btn-primary search-button"><i class="icon icon-search"></i></button>
+          </span>
+        </li>
+      </ul>
+
+      <ul class="nav pull-right help-menu" style="margin-left:0;">
+        <li class="dropdown" data-dropdown-sticky="true">
+          <a id="help_dropdown" class="dropdown-toggle help-toggle" href="javascript:void(0)"> Ayuda <b class="caret"></b></a>
+          <div class="dropdown-menu help-dropdown dropdown-bordered">
+            <div class="nav-header">
+              <a href="/help?ref=help-dropdown" class="help-center-link">Visita el centro de ayuda »</a>
+            </div>
+            <ul class="unstyled list-unstyled">
+              <li class="loading"></li>
+              <li class="hidden">
+                <a href="/safety?ref=help-dropdown" class="">Visita nuestro Centro de seguridad y confianza</a>
+              </li>
+              <li class="all_faqs hidden">
+                <a href="/help/topic/hosting?ref=help-dropdown">Ver las preguntas frecuentes</a>
+              </li>
+              <li id="faqadmin" style="display: none;">
+                <input type="hidden" name="faq_link[page]" value="search-index">
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="list-your-space">
+          <a id="list-your-space" class="yellow btn btn-special" href="/rooms/new">Publica tu anuncio</a>
+        </li>
+      </ul>
+
+      <ul class="nav pull-right logged-out">
+        <li id="sign_up"><a data-signup-modal="" href="/signup_login?redirect_params[action]=index&amp;redirect_params[controller]=search&amp;redirect_params[location]=Londres%2C+Reino+Unido&amp;redirect_params[path_location]=Londres--Reino-Unido&amp;redirect_params[source]=bb">Regístrate</a></li>
+        <li id="login"><a data-login-modal="" href="/login?redirect_params[action]=index&amp;redirect_params[controller]=search&amp;redirect_params[location]=Londres%2C+Reino+Unido&amp;redirect_params[path_location]=Londres--Reino-Unido&amp;redirect_params[source]=bb">Iniciar sesión</a></li>
+      </ul>
+
+      <ul class="nav pull-right logged-in">
+        <li class="dropdown user-item">
+          <a class="dropdown-toggle" href="javascript:void(0)">
+            <div class="mini-media-box media-photo user-profile-image"></div>
+            <span class="value_name">Usuario</span> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-bordered header-dropdown">
+            <li><a href="/home/dashboard">Escritorio</a></li>
+            <li class="listings">
+              <a href="/rooms">
+                <span class="singular" style="display: none;">Tu anuncio</span>
+                <span class="plural">Tus anuncios</span>
+              </a>
+            </li>
+            <li class="reservations" style="display: none;">
+              <a href="/my_listings">Tus reservas</a>
+            </li>
+            <li><a href="/trips/upcoming">Tus viajes</a></li>
+            <li><a href="/wishlists/my" id="wishlists">Wish Lists</a></li>
+            <li class="groups">
+              <a href="/groups">Grupos</a>
+            </li>
+            <li>
+              <a href="/invite?r=3">
+                Invita a tus amigos
+                <span class="label label-pink label-new">Nuevo</span>
+              </a>
+            </li>
+            <li><a href="/users/edit">Editar perfil</a></li>
+            <li><a href="/account">Cuenta</a></li>
+            <li><a href="/logout" id="header-logout">Salir</a></li>
+          </ul>
+        </li>
+        <li class="divider-vertical"></li>
+        <li id="inbox-item">
+          <a href="/inbox"><i class="icon icon-mail hide-text"><span class="text-hide">Bandeja de entrada</span></i><i class="alert-count position-super fade">0</i></a>
+        </li>
+        <li class="divider-vertical"></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,9 @@
 define([
   'marionette',
-  'views/home/index',
   'routers/router',
-  'collections/advertise.collection'
-], function(Marionette, MainView, MainRouter, AdvertiseCollection) {
+  'collections/advertise.collection',
+  'bootstrap'
+], function(Marionette, MainRouter, AdvertiseCollection, Bootstrap) {
   'use strict';
 
   var app = new Marionette.Application();
@@ -14,24 +14,10 @@ define([
   });
 
   app.addInitializer(function() {
-
     MainRouter.init({
+      app: app,
       collection: advCollection
     });
-
-    var mainView = new MainView({
-      collection: advCollection
-    });
-
-    // Backbone History initialization
-    // Backbone.history.start({
-    //   pushState: false,
-    //   root: Url.getRoot()
-    // });
-
-    // advCollection.once('sync', function() {
-      app.mainRegion.show(mainView);
-    // });
   });
 
   return app;

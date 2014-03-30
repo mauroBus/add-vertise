@@ -12,9 +12,16 @@ require.config({
     // marionette
     'marionette': '../bower_components/marionette/lib/core/amd/backbone.marionette',
 
+    'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap',
+
     // requirejs plugins
     'text': '../bower_components/text/text',
     'jst': '../bower_components/jst/jst',
+
+    'jquery-ui': '../bower_components/jquery-ui/ui/jquery-ui',
+    'jquery-ui.menu': '../bower_components/jquery-ui/ui/jquery.ui.menu',
+    'jquery-ui.widget': '../bower_components/jquery-ui/ui/jquery.ui.widget',
+    'autocomplete': '../bower_components/jquery-ui/ui/jquery.ui.autocomplete',
 
     // progressbar
     'nprogress': '../bower_components/nprogress/nprogress',
@@ -37,6 +44,14 @@ require.config({
     },
     marionette: {
       deps: ['backbone']
+    },
+    bootstrap: {
+      deps: ['jquery'],
+      exports: 'Bootstrap'
+    },
+    autocomplete: {
+      deps: ['jquery', 'jquery-ui.widget', 'jquery-ui.menu'],
+      exports: 'Autocomplete'
     },
     nprogress: {
       deps: ['jquery'],
