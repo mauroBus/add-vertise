@@ -78,8 +78,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/styles/*.less',
           '<%= yeoman.app %>/views/*.less',
           '<%= yeoman.app %>/views/*/*.less',
-          '<%= yeoman.app %>/widgets/*.less',
-          '<%= yeoman.app %>/widgets/*/*.less'
+          '<%= yeoman.app %>/widgets/*/styles.less'
         ],
         tasks: ['less', 'autoprefixer']
       },
@@ -363,6 +362,21 @@ module.exports = function (grunt) {
             'styles/fonts/{,*/}*.*'
           ]
         }]
+      },
+      // I will add this to copy images from bootsrap.
+      imgs: {
+        files: [
+          {
+            cwd: '<%= yeoman.app %>/bower_components/bootstrap/dist/fonts',
+            src: '*',
+            dest: '.tmp/fonts/',
+            expand: true
+            // flatten: true,
+            // filter: 'isFile'
+          }
+        ]
+        // cwd: '<%= yeoman.dist %>/fonts',
+
       }
       // styles: {
       //     expand: true,
@@ -391,13 +405,15 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         // 'compass:server',
-        'less' // less to css
-        // 'copy:styles'
+        'less', // less to css
+        // 'copy:styles',
+        'copy:imgs'
       ],
       test: [
         // 'copy:styles'
       ],
       dist: [
+        'copy:imgs',
         // 'compass',
         'less', // less to css
         // 'copy:styles',

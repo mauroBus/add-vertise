@@ -1,42 +1,52 @@
 [
   {
     "id": 1,
-    "name": "post one",
+    "title": "Dolan Creek Retreat—Big Sur",
     "city": "Necochea",
     "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
     "userName": "John",
-    "userId": 25
+    "userId": 25,
+    "prize": 523,
+    "img": "images/items/1/img.jpg"
   },
     {
     "id": 2,
-    "name": "post one",
+    "title": "Ocean front 6-bedroom masterpiece",
     "city": "Necochea",
     "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
     "userName": "John",
-    "userId": 25
+    "userId": 25,
+    "prize": 523,
+    "img": "images/items/1/img2.jpg"
   },
     {
     "id": 3,
-    "name": "post one",
+    "title": "Dolan Creek Retreat—Big Sur",
     "city": "Necochea",
     "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
     "userName": "John",
-    "userId": 25
+    "userId": 25,
+    "prize": 523,
+    "img": "images/items/1/img.jpg"
   },
     {
     "id": 4,
-    "name": "post one",
+    "title": "Ocean front 6-bedroom masterpiece",
     "city": "Necochea",
     "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
     "userName": "John",
-    "userId": 25
+    "userId": 25,
+    "prize": 523,
+    "img": "images/items/1/img2.jpg"
   },
     {
     "id": 5,
-    "name": "post one",
+    "title": "Dolan Creek Retreat—Big Sur",
     "city": "Necochea",
     "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
     "userName": "John",
-    "userId": 25
+    "userId": 25,
+    "prize": 523,
+    "img": "images/items/1/img.jpg"
   }
 ]

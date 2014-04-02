@@ -1,9 +1,10 @@
 define([
-  'marionette',
-  'routers/router',
-  'collections/advertise.collection',
-  'bootstrap'
-], function(Marionette, MainRouter, AdvertiseCollection, Bootstrap) {
+    'marionette',
+    'routers/router',
+    'collections/item.collection',
+    'bootstrap'
+  ],
+  function(Marionette, MainRouter, AdvertiseCollection, Bootstrap) {
   'use strict';
 
   var app = new Marionette.Application();

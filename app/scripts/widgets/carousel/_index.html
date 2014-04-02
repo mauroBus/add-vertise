@@ -1,0 +1,28 @@
+<div id="carousel-<%= uuid %>" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% _.each(imgs, function(img, index) { %>
+      <li data-target="#carousel-<%= uuid %>" data-slide-to="0" <% if (!index) { %> class="active" <% } %> ></li>
+    <% }); %>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <% _.each(imgs, function(img, index) { %>
+      <div class="item <% if (!index) { %> active <% } %>">
+        <img src="<%= img.src %>" alt="<%= img.alt %>">
+        <div class="carousel-caption">
+          <%= img.caption %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-<%= uuid %>" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-<%= uuid %>" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

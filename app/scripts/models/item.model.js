@@ -3,7 +3,7 @@ define([
   ],
   function(Backbone) {
 
-    var AdvertiseModel = Backbone.Model.extend({
+    var ItemModel = Backbone.Model.extend({
       defaults: {
         id: -1,
         userName: 'no user name',
@@ -15,6 +15,6 @@ define([
       }
     });
 
-    return AdvertiseModel;
+    return ItemModel;
   }
 );

@@ -11,10 +11,9 @@ define([
 
     routes: {
       '': 'loadHomePage',
-      'help':                 'help',    // #help
-      'search/:query':        'search',  // #search/advertises
-      // 'search/:query/p:page': 'search'   // #search/advertises/p7
-      '*anyOther':             'loadErrorPage'
+      'help': 'help',    // #help
+      'list/:prov/:city': 'list',  // #list/BuenosAires/Necochea
+      '*anyOther': 'loadErrorPage'
     },
 
     app: null,
@@ -26,13 +25,15 @@ define([
     },
 
     help: function() {
+      // TODO
     },
 
-    search: function(query, page) {
+    list: function(prov, city) {
       this._loadSearchPage();
 
       this.collection.fetch({
-        query: query
+        prov: prov,
+        city: city
       });
     },
 
@@ -59,8 +60,12 @@ define([
   var init = function(options) {
     var r = new AdvertiseRouter(options);
 
-    Backbone.on('navigate:search', function(data) {
-      r.navigate('search/' + data.dest, {trigger: true});
+    Backbone.on('navigate:list', function(data) {
+      r.navigate('/list/' + data.dest, { trigger: true });
+    });
+
+    Backbone.on('navigate:item:details', function(item) {
+      r.navigate('/details/item/' + item.id, { trigger: true });
     });
 
     Backbone.history.start();
@@ -70,29 +75,4 @@ define([
     init : init
   };
 
-  // var Controller = Marionette.Controller.extend({
-  //   initialize: function(app) {
-  //     this.app = app;
-  //     this.composer = app.composer;
-  //     this.isTurnedOff = true;
-  //   },
-
-  //   landing: function() {
-  //     if (this.isTurnedOff) {
-  //       var landingView = new LandingView({
-  //         model: this.app.models.user
-  //       });
-
-  //       this.composer.region('body/main').show(landingView);
-
-  //       this.isTurnedOff = false;
-  //     }
-  //   },
-
-  //   onTurnOff: function() {
-  //     this.isTurnedOff = true;
-  //   }
-  // });
-
-  // return Controller;
 });

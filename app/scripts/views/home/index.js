@@ -1,45 +1,55 @@
 define([
-  'jquery',
   'marionette',
   'jst!./_index.html',
-  'jquery-ui'
+  'widgets/search/index',
+  'widgets/carousel/index'
   ],
-  function($, Marionette, Tpl) {
+  function(Marionette, Tpl, SearchView, CarouselView) {
   'use strict';
 
-  var HomeView = Marionette.ItemView.extend({
+  var HomeView = Marionette.Layout.extend({
     template: Tpl,
     className: 'home-view',
 
-    ui: {
-      'submitBtn': '.js-submitLocation',
-      'locationInput': '.js-locationInput'
+    regions: {
+      search: '.search-region',
+      carousel: '.carousel-region'
     },
 
-    events: {
-      'click @ui.submitBtn': 'onSubmitLocation'
-    },
+    searchView: null,
+    carouselView: null,
 
-    onRender: function() {
-      this.ui.locationInput.autocomplete({
-        source: [
-          'a',
-          'asd',
-          'sda',
-          'fdga',
-          'b',
-          'c'
+    initialize: function(options) {
+      this.searchView = new SearchView({
+        size: 'big'
+      });
+
+      this.carouselView = new CarouselView({
+        imgs: [
+          {
+            src: 'https://a0.muscache.com/airbnb/static/landing_pages/home_v2/hero/356602-6d0f90db6c417bc75c26faec4289791f.jpg',
+            alt: 'nose',
+            caption: 'asd'
+          },
+          {
+            src: 'http://archinspire.org/wp-content/uploads/2008/11/apartment-city-house-residential-design4.jpeg',
+            alt: 'nose',
+            caption: 'asd'
+          },
+          {
+            src: 'http://us.123rf.com/400wm/400/400/arquiplay77/arquiplay771011/arquiplay77101100008/8163617-interieur-design-sc--ne-van-modern-appartement-met-woonkamer-en-diner-kamer-in-hout-en-bruin-kleuren.jpg',
+            alt: 'nose',
+            caption: 'asd'
+          }
         ]
       });
     },
 
-    onSubmitLocation: function() {
-      var location = this.ui.locationInput.val();
-
-      Backbone.trigger('navigate:search', {
-        dest: location
-      });
+    onRender: function() {
+      this.search.show(this.searchView);
+      this.carousel.show(this.carouselView);
     }
+
   });
 
   return HomeView;
