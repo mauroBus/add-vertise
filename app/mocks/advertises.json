@@ -1,52 +1,198 @@
-[
-  {
-    "id": 1,
-    "title": "Dolan Creek Retreat—Big Sur",
-    "city": "Necochea",
-    "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
-    "userName": "John",
-    "userId": 25,
-    "prize": 523,
-    "img": "images/items/1/img.jpg"
-  },
+{
+  "page": 0,
+  "totalPages": 10,
+  "results": [
     {
-    "id": 2,
-    "title": "Ocean front 6-bedroom masterpiece",
-    "city": "Necochea",
-    "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
-    "userName": "John",
-    "userId": 25,
-    "prize": 523,
-    "img": "images/items/1/img2.jpg"
-  },
+      "id": 1,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 523,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
     {
-    "id": 3,
-    "title": "Dolan Creek Retreat—Big Sur",
-    "city": "Necochea",
-    "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
-    "userName": "John",
-    "userId": 25,
-    "prize": 523,
-    "img": "images/items/1/img.jpg"
-  },
+      "id": 2,
+      "title": "Alquilo Dos Dptos a Media Cuadra de la Playa",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "Mirta",
+      "userId": 25,
+      "prize": 320,
+      "publishDate": 1396807101798,
+      "img": "images/items/2/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
     {
-    "id": 4,
-    "title": "Ocean front 6-bedroom masterpiece",
-    "city": "Necochea",
-    "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
-    "userName": "John",
-    "userId": 25,
-    "prize": 523,
-    "img": "images/items/1/img2.jpg"
-  },
+      "id": 3,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 300,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
     {
-    "id": 5,
-    "title": "Dolan Creek Retreat—Big Sur",
-    "city": "Necochea",
-    "text": "asd asd askdh kjahf kjsdhf kjhsd fhskf hkjsh fdkjshd fhskf hksjd fkjshdf kjsd fhksjhfdk jshd fkjsd f",
-    "userName": "John",
-    "userId": 25,
-    "prize": 523,
-    "img": "images/items/1/img.jpg"
-  }
-]
+      "id": 4,
+      "title": "Ocean front 6-bedroom masterpiece",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 580,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img2.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 5,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 89555,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 6,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 54664564654,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img2.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 7,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 100000,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 8,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 850000,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img2.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 9,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 530000,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 10,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 523,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img2.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 11,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 58,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    },
+    {
+      "id": 12,
+      "title": "Dolan Creek Retreat—Big Sur",
+      "city": "Necochea",
+      "text": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home. Your private third floor suite overlooks a lush and peaceful garden and patio. Renovated spa-like bathroom with soaking tub and slate floors, fluffy towels, and access to atrium/sun room and library/den with satellite tv. Wireless internet. Safe and friendly neighborhood in central SF location.",
+      "shortText": "Sunny, treehouse-like master bedroom suite with fireplace, king size bed in elegant Castro district home.",
+      "userName": "John",
+      "userId": 25,
+      "prize": 1000000,
+      "publishDate": 1396807101798,
+      "img": "images/items/1/img2.jpg",
+      "location": {
+        "x": -38.580405,
+        "y": -58.724381
+      }
+    }
+  ]
+}

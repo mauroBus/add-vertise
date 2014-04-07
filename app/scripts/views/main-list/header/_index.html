@@ -1,67 +1,29 @@
-<div class="navbar navbar-top">
-  <div class="container">
-    <a href="#" class="brand icon-addvertise">Addvertise</a>
+<a href="#" class="brand">Addvertise</a>
 
-    <!-- Region for the Places Autocomplete View: -->
-    <div class="places-search-region"></div>
+<!-- Region for the Places Autocomplete View: -->
+<div class="places-search-region"></div>
 
-    <ul class="nav pull-right help-menu">
-      <li class="dropdown">
-        <a class="dropdown-toggle help-toggle" href="javascript:void(0)"> Ayuda <b class="caret"></b></a>
-      </li>
-      <li class="list-your-space">
-        <a id="list-your-space" class="yellow btn btn-special" href="/rooms/new">Publica tu anuncio</a>
-      </li>
-    </ul>
+<div class="pull-right">
 
-    <ul class="nav pull-right logged-out">
-      <li id="sign_up">
-        <a>Regístrate</a>
-      </li>
-      <li id="login">
-        <a>Iniciar sesión</a>
-      </li>
-    </ul>
+  <button type="button" class="btn btn-success js-init-session">Iniciar Sesión</button>
 
-    <ul class="nav pull-right logged-in">
-      <li class="dropdown user-item">
-        <a class="dropdown-toggle" href="javascript:void(0)">
-          <div class="mini-media-box media-photo user-profile-image"></div>
-          <span class="value_name">Usuario</span> <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu dropdown-bordered header-dropdown">
-          <li><a href="/home/dashboard">Escritorio</a></li>
-          <li class="listings">
-            <a href="/rooms">
-              <span class="singular" style="display: none;">Tu anuncio</span>
-              <span class="plural">Tus anuncios</span>
-            </a>
-          </li>
-          <li class="reservations" style="display: none;">
-            <a href="/my_listings">Tus reservas</a>
-          </li>
-          <li><a href="/trips/upcoming">Tus viajes</a></li>
-          <li><a href="/wishlists/my" id="wishlists">Wish Lists</a></li>
-          <li class="groups">
-            <a href="/groups">Grupos</a>
-          </li>
-          <li>
-            <a href="/invite?r=3">
-              Invita a tus amigos
-              <span class="label label-pink label-new">Nuevo</span>
-            </a>
-          </li>
-          <li><a href="/users/edit">Editar perfil</a></li>
-          <li><a href="/account">Cuenta</a></li>
-          <li><a href="/logout" id="header-logout">Salir</a></li>
-        </ul>
-      </li>
-      <li class="divider-vertical"></li>
-      <li id="inbox-item">
-        <a href="/inbox"><i class="icon icon-mail hide-text"><span class="text-hide">Bandeja de entrada</span></i><i class="alert-count position-super fade">0</i></a>
-      </li>
-      <li class="divider-vertical"></li>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary js-register">Registrarse</button>
+
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+
+    <ul class="dropdown-menu" role="menu">
+      <li><a>Action</a></li>
+      <li><a>Another action</a></li>
+      <li><a>Something else here</a></li>
+      <li class="divider"></li>
+      <li><a>Separated link</a></li>
     </ul>
   </div>
+
+  <button type="button" class="btn btn-warning js-publish">Publicar Anuncio</button>
 
 </div>

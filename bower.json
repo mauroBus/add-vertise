@@ -14,6 +14,7 @@
     "jst": "https://github.com/ahutchings/require-jst.git#9a36583646eb6b4cfeb6fc2da3360365b06f52b7",
     "bootstrap": "~3.1.1",
     "jquery-ui": "~1.10.4",
-    "requirejs-plugins": "~1.0.2"
+    "requirejs-plugins": "~1.0.2",
+    "backbone.paginator": "~0.8.1"
   }
 }

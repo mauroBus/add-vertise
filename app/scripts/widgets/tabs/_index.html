@@ -1,0 +1,18 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs js-nav-tabs panel-header">
+  <% _.each(tabs, function(tab, index) { %>
+    <li class="<% if (index === 0) { %>active <% } %> wrapper">
+      <a href="#<%= tab.name %>" data-toggle="tab" data-tab-id="<%= index %>"><%= tab.name %></a>
+    </li>
+  <% }); %>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <% _.each(tabs, function(tab, index) { %>
+    <div
+      class="tab-pane fade js-<%= index %>-region <% if (index === 0) { %> active in <% } %>"
+      id="<%= tab.name %>">
+    </div>
+  <% }); %>
+</div>

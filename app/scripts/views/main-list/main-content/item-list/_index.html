@@ -1,0 +1,19 @@
+<div class="">Página <%= currentPage %> de <%= totalPages %></div>
+
+<div class="items-container"></div>
+
+<ul class="pagination pagination-lg js-pagination">
+  <li><a class="js-page-prev">&laquo;</a></li>
+
+  <% for (var i = 0; i < totalPages; i++) { %>
+    <li <% if (active === i) { %> class="active"<% } %> data-page-nbr="<%= i %>">
+      <a
+        class="js-page"
+        data-page-nbr="<%= i %>">
+        <%= i + 1 %>
+      </a>
+    </li>
+  <% } %>
+
+  <li><a class="js-page-next">&raquo;</a></li>
+</ul>

@@ -4,39 +4,65 @@ define([
   'jst!./_index.html',
   './header/index',
   './main-content/index',
-  './sidebar/index',
-  './footer/index'
+  './footer/index',
+  'views/item-full-details/index'
   ],
-  function($, Marionette, Tpl, HeaderView, MainContentView, SideBarView, FooterView) {
+  function($, Marionette, Tpl, HeaderView, MainContentView, FooterView, ItemFullDetailsView) {
   'use strict';
 
-  var MainView = Marionette.Layout.extend({
+  var MainListView = Marionette.Layout.extend({
     template: Tpl,
-    className: 'main-view',
+    className: 'main-list-view',
 
     regions: {
-      header : '.header-region',
-      sideBar: '.sideBar-region',
-      mainContent: '.mainContent-region',
+      headerRegion : '.header-region',
+      mainContentRegion: '.mainContent-region',
       footer: '.footer-region'
+    },
+
+    prov: null,
+    city: null,
+
+    initialize: function(options) {
+      this.prov = options.prov;
+      this.city = options.city;
+
+      this.collectionPromise = this.collection.fetch({
+        prov: this.prov,
+        city: this.city
+      });
     },
 
     onRender: function() {
       var headerView = new HeaderView();
-      this.header.show(headerView);
-
-      var mainContentView = new MainContentView({
-        collection: this.options.collection
-      });
-      this.mainContent.show(mainContentView);
-
-      var sideBarView = new SideBarView();
-      this.sideBar.show(sideBarView);
-
       var footerView = new FooterView();
+
+      this.headerRegion.show(headerView);
       this.footer.show(footerView);
+    },
+
+    showDetails: function(id) {
+      var that = this;
+      that.collectionPromise.done(function() {
+        var model = that.collection.get(id);
+        if (!model) {return;}
+
+        var itemFullDetailsView = new ItemFullDetailsView({
+          model: model
+        });
+
+        that.mainContentRegion.show(itemFullDetailsView);
+      });
+    },
+
+    showList: function() {
+      var mainContentView = new MainContentView({
+        collection: this.collection
+      });
+      this.mainContentRegion.show(mainContentView);
     }
+
   });
 
-  return MainView;
+  return MainListView;
 });

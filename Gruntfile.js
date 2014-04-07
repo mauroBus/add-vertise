@@ -77,7 +77,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/styles/*.less',
           '<%= yeoman.app %>/views/*.less',
-          '<%= yeoman.app %>/views/*/*.less',
+          '<%= yeoman.app %>/views/*/styles.less',
           '<%= yeoman.app %>/widgets/*/styles.less'
         ],
         tasks: ['less', 'autoprefixer']

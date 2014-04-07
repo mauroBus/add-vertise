@@ -1,11 +1,14 @@
 @imgWidth: 20%;
+@priceColor: peru;
 
 .item-view {
 
   .clearfix;
 
-  box-shadow: inset 0 0 16px 2px gray;
-  padding: 1%;
+  margin-bottom: 5px;
+  padding: 4px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
 
   .item-title {
     display: inline-block;
@@ -13,18 +16,60 @@
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .item-picture {
     width: @imgWidth;
-    // height: auto;
     float: left;
-    box-shadow: inset 0 0 90px 30px rgba(50, 48, 50, 0.99);
+    margin-bottom: 0;
+    padding: 2px;
+    border-width: 2px;
+    cursor: pointer;
   }
 
-  .info-wrapper {
-    float: left;
-    float: left;
+  .price {
+    .label;
+    .label-success;
+    float: right;
+    font-size: 125%;
+    background-color: @priceColor;
+
+    .currency {
+      font-size: 75%;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+
+  .item-text {
+    display: inline-block;
     margin: 1% 1% 1% 3%;
+  }
+
+  .item-info {
+    float: right;
+    margin-right: 15px;
+
+    .publish-date {
+      margin-left: 20px;
+    }
+
+    .user {
+      &__name { // .user__name
+        font-size: 16px;
+        font-weight: bold;
+        color: #457;
+      }
+    }
+  }
+
+  &:hover {
+    // background-color: rgba(233, 174, 69, 0.7);
+    background-color: #F6F5F7; //#FFF6E0;
+    box-shadow: 0 0 9px 0px #CCC;
   }
 }

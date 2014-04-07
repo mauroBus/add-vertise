@@ -1,0 +1,48 @@
+<div class="panel-header">
+  <h1 class="title">
+    <%= title %>
+    <small class="place"><%= city %></small>
+  </h1>
+</div>
+
+<div class="info">
+  <div class="left main-info">
+    <div class="tabs-region"></div>
+    <div class="text">
+      <div class="details panel-header">Detalles:</div>
+      <div class="details-text">
+        <%= text %>
+        <div class="predefined-details col-5">
+          <table class="table table-bordered table-striped" id="description_details" itemprop="breadcrumb">
+            <tbody>
+              <tr>
+                <td>Capacidad:</td>
+                <td class="value"><%= capacity %></td>
+              </tr>
+              <tr>
+                <td>Dormitorios:</td>
+                <td class="value"><%= bedrooms %></td>
+              </tr>
+              <tr>
+                <td>Baños:</td>
+                <td class="value"><%= bathrooms %></td>
+              </tr>
+              <tr>
+                <td>Estadía mínima:</td>
+                <td class="value"><%= minimumStay %> noches</td>
+              </tr>
+              <tr>
+                <td>Gastos de limpieza:</td>
+                <td class="value"><span id="cleaning_fee_price_string">$ <%= cleaningFeePrice %></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> <!-- details-text -->
+    </div>
+  </div>
+
+  <div class="left secondary-info">
+    <div class="meta-info-region"></div>
+  </div>
+</div>

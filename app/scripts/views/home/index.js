@@ -2,9 +2,10 @@ define([
   'marionette',
   'jst!./_index.html',
   'widgets/search/index',
-  'widgets/carousel/index'
+  'widgets/carousel/index',
+  'models/carousel.model'
   ],
-  function(Marionette, Tpl, SearchView, CarouselView) {
+  function(Marionette, Tpl, SearchView, CarouselView, CarouselModel) {
   'use strict';
 
   var HomeView = Marionette.Layout.extend({
@@ -24,7 +25,7 @@ define([
         size: 'big'
       });
 
-      this.carouselView = new CarouselView({
+      var carouselModel = new CarouselModel({
         imgs: [
           {
             src: 'https://a0.muscache.com/airbnb/static/landing_pages/home_v2/hero/356602-6d0f90db6c417bc75c26faec4289791f.jpg',
@@ -42,6 +43,10 @@ define([
             caption: 'asd'
           }
         ]
+      });
+
+      this.carouselView = new CarouselView({
+        model: carouselModel
       });
     },
 

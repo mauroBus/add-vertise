@@ -1,12 +1,18 @@
 <a class="item-title js-seeMoreDetails"><%= title %></a>
 
-<img class="item-picture js-seeMoreDetails" src="<%= img %>"></img>
+<div class="price">
+  <span class="currency">$</span>
+  <%= prize %>
+</div>
 
-<div class="info-wrapper">
-  <div class="item-text"><%= text %></div>
-  <div class="user-info">
-    <span class="user-name">User: <%= userName %></span>
-    <span class="">User Id: <%= userId %></span>
-  </div>
-  <div class="price"><%= prize %></div>
+<a class="thumbnail item-picture js-seeMoreDetails">
+  <img src="<%= img %>">
+</a>
+
+<div class="item-text"><%= shortText %></div>
+
+<div class="item-info">
+  <span class="user">Usuario: <span class="user__name"><%= userName %></span></span>
+  <!-- <span class="">User Id: <%= userId %></span> -->
+  <span class="publish-date"><%= formatedPublishDate %></span>
 </div>

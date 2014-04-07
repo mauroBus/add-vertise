@@ -4,20 +4,23 @@ define([
     'views/main-list/index',
     'views/404-not-found/index'
   ],
-  function(Backbone, HomeView, MainView, NotFoundPageView) {
+  function(Backbone, HomeView, MainListView, NotFoundPageView) {
   'use strict';
 
   var AdvertiseRouter = Backbone.Router.extend({
 
     routes: {
       '': 'loadHomePage',
-      'help': 'help',    // #help
-      'list/:prov/:city': 'list',  // #list/BuenosAires/Necochea
+      'help': 'help',    // #/help
+      'list/:prov/:city': 'loadItemsList',  // #/list/BuenosAires/Necochea
+      'list/:prov/:city/:id': 'loadItemFullDetails', // #/item/23
       '*anyOther': 'loadErrorPage'
     },
 
     app: null,
     collection: null,
+
+    mainListView: null,
 
     initialize: function(options) {
       this.app = options.app;
@@ -28,13 +31,14 @@ define([
       // TODO
     },
 
-    list: function(prov, city) {
-      this._loadSearchPage();
+    loadItemsList: function(prov, city) {
+      this._createMainListView(prov, city);
+      this.mainListView.showList();
+    },
 
-      this.collection.fetch({
-        prov: prov,
-        city: city
-      });
+    loadItemFullDetails: function(prov, city, id) {
+      this._createMainListView(prov, city);
+      this.mainListView.showDetails(id);
     },
 
     loadHomePage: function() {
@@ -47,12 +51,16 @@ define([
       this.app.mainRegion.show(pageNotFoundView);
     },
 
+    _createMainListView: function(prov, city) {
+      if (!this.mainListView) {
+        this.mainListView = new MainListView({
+          collection: this.collection,
+          prov: prov,
+          city: city
+        });
+      }
 
-    _loadSearchPage: function() {
-      var mainView = new MainView({
-        collection: this.collection
-      });
-      this.app.mainRegion.show(mainView);
+      this.app.mainRegion.show(this.mainListView);
     }
 
   });
@@ -65,7 +73,19 @@ define([
     });
 
     Backbone.on('navigate:item:details', function(item) {
-      r.navigate('/details/item/' + item.id, { trigger: true });
+      r.navigate(Backbone.history.fragment + '/' + item.id, { trigger: true });
+    });
+
+    Backbone.on('navigate:login', function() {
+      r.navigate('/login', { trigger: true });
+    });
+
+    Backbone.on('navigate:register', function() {
+      r.navigate('/register', { trigger: true });
+    });
+
+    Backbone.on('navigate:publish', function() {
+      r.navigate('/publish', { trigger: true });
     });
 
     Backbone.history.start();

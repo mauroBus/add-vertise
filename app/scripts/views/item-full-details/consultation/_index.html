@@ -1,0 +1,45 @@
+<div class="lwlb-screen span6">
+
+  <div class="hide alert alert-header alert-warning panel-header error-block not-available">
+    <span class="contacted-before"><strong>Has contactado anteriormente con este anfitrión.</strong> <a href="/messaging/qt_with/1284080" data-popup="true">Ver mensajes anteriores</a></span>
+    <span class="not-available"><strong> Estas fechas no están disponibles.</strong> Debes seleccionar las disponibles.</span>
+    <span id="dates_other_error" class="other"></span>
+  </div>
+
+  <div class="panel-body">
+    <div class="reservation-parameters content-row row row-space-1">
+      <div class="col-4">
+        <label for="message_checkin">Llegada</label>
+        <input class="checkin date ui-datepicker-target" id="message_checkin" name="message_checkin" placeholder="dd/mm/aaaa" type="text" value="">
+      </div>
+      <div class="col-4">
+        <label for="message_checkout">Salida</label>
+        <input class="checkout date ui-datepicker-target" id="message_checkout" name="message_checkout" placeholder="dd/mm/aaaa" type="text" value="">
+      </div>
+      <div class="col-4">
+        <label for="message_number_of_guests">Huéspedes</label>
+        <div class="select">
+          <select id="message_number_of_guests" name="message_number_of_guests" onchange="checkAvailabilityOfDates();">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8+</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="full-field-block row-space-2">
+      <label for="question">
+        Dile a USA Stay lo que te gusta de su hogar, lo más importante acerca de tu alojamiento o hazle una pregunta.
+      </label>
+
+      <textarea class="focus-on-active js-consult-text" id="question" name="question" rows="6"></textarea>
+    </div>
+
+  </div> <!-- panel-body -->
+
+</div>

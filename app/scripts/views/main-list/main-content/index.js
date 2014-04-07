@@ -1,22 +1,37 @@
 define(
 [
-  'jquery',
   'marionette',
   'jst!./_index.html',
-  'views/item/index'
+  './item-list/index',
+  './sidebar/index'
 ],
-function($, Marionette, Tpl, AdvertiseView) {
+function(Marionette, Tpl, ItemListView, SidebarView) {
   'use strict';
 
-  var MainContentView = Marionette.CollectionView.extend({
+  var MainContentView = Marionette.Layout.extend({
     template: Tpl,
-    className: 'mainContent-view',
+    className: 'main-content-view',
 
-    itemView: AdvertiseView,
+    regions: {
+      itemListRegion: '.item-list-region',
+      sideBarRegion: '.sidebar-region'
+    },
+
+    itemListView: null,
+    sideBarView: null,
 
     initialize: function(options) {
-      this.collection = options.collection;
+      this.itemListView = new ItemListView({
+        collection: this.collection
+      });
+      this.sideBarView = new SidebarView();
+    },
+
+    onRender: function() {
+      this.itemListRegion.show(this.itemListView);
+      this.sideBarRegion.show(this.sideBarView);
     }
+
   });
 
   return MainContentView;

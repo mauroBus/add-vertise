@@ -1,0 +1,41 @@
+{
+  "id": 1,
+  "title": "The Amado Units 1-5 Entire Complex",
+  "city": "Necochea",
+  "text": "Desert chic boutique accommodation - private Palm Springs compound sleeps 12 people - perfect for small groups, productions, celebrations, bachelorettes, wedding parties, family reunions, weekend getaways...rent the whole complex units 1-5. There are a total of 5 individual units available for booking at The Amado, or you can book the whole complex for events and special occasions.",
+  "userName": "Smith",
+  "userId": 25,
+  "prize": 523,
+  "publishDate": 1396807101798,
+  "fullImgs": [
+    "images/items/2/full/1.jpg",
+    "images/items/2/full/2.jpg",
+    "images/items/2/full/3.jpg",
+    "images/items/2/full/4.jpg",
+    "images/items/2/full/5.jpg",
+    "images/items/2/full/6.jpg",
+    "images/items/2/full/7.jpg",
+    "images/items/2/full/8.jpg",
+    "images/items/2/full/9.jpg",
+    "images/items/2/full/10.jpg",
+    "images/items/2/full/11.jpg",
+    "images/items/2/full/12.jpg",
+    "images/items/2/full/13.jpg",
+    "images/items/2/full/14.jpg",
+    "images/items/2/full/15.jpg",
+    "images/items/2/full/16.jpg",
+    "images/items/2/full/17.jpg",
+    "images/items/2/full/18.jpg",
+    "images/items/2/full/19.jpg",
+    "images/items/2/full/20.jpg"
+  ],
+  "location": {
+    "x": -38.580405,
+    "y": -58.724381
+  },
+  "capacity": 5,
+  "bedrooms": 2,
+  "bathrooms": 1,
+  "minimumStay": 2,
+  "cleaningFeePrice": 100
+}

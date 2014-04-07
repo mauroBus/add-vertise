@@ -8,6 +8,7 @@ require.config({
     'backbone': '../bower_components/backbone/backbone',
     'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
     'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
+    'backbone.paginator': '../bower_components/backbone.paginator/lib/backbone.paginator',
 
     // marionette:
     'marionette': '../bower_components/marionette/lib/core/amd/backbone.marionette',
@@ -43,6 +44,10 @@ require.config({
     backbone: {
       deps: ['jquery', 'underscore'],
       exports: 'Backbone'
+    },
+    'backbone.paginator': {
+      deps: ['backbone', 'underscore', 'jquery'],
+      exports: 'Backbone.Paginator'
     },
     marionette: {
       deps: ['backbone']
