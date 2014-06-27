@@ -2,18 +2,23 @@ define([
     'backbone',
     'views/home/index',
     'views/main-list/index',
-    'views/404-not-found/index'
+    'views/404-not-found/index',
+    'views/login/index',
+    'views/new-item/index'
   ],
-  function(Backbone, HomeView, MainListView, NotFoundPageView) {
+  function(Backbone, HomeView, MainListView, NotFoundPageView, LoginView, NewItemView) {
   'use strict';
 
   var AdvertiseRouter = Backbone.Router.extend({
 
     routes: {
       '': 'loadHomePage',
+      'home': 'loadHomePage',
       'help': 'help',    // #/help
       'list/:prov/:city': 'loadItemsList',  // #/list/BuenosAires/Necochea
       'list/:prov/:city/:id': 'loadItemFullDetails', // #/item/23
+      'login': 'loadLogin',
+      'publish': 'loadPublish',
       '*anyOther': 'loadErrorPage'
     },
 
@@ -51,6 +56,16 @@ define([
       this.app.mainRegion.show(pageNotFoundView);
     },
 
+    loadLogin: function() {
+      var login = new LoginView();
+      this.app.mainRegion.show(login);
+    },
+
+    loadPublish: function() {
+      var publishView = new NewItemView();
+      this.app.mainRegion.show(publishView);
+    },
+
     _createMainListView: function(prov, city) {
       if (!this.mainListView) {
         this.mainListView = new MainListView({
@@ -67,6 +82,10 @@ define([
 
   var init = function(options) {
     var r = new AdvertiseRouter(options);
+
+    Backbone.on('navigate:home', function(data) {
+      r.navigate('/home', { trigger: true });
+    });
 
     Backbone.on('navigate:list', function(data) {
       r.navigate('/list/' + data.dest, { trigger: true });

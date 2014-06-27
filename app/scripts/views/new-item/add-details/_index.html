@@ -1,0 +1,52 @@
+<div class="">
+
+  <div class="detail-row">
+    <div class="col-md-3">
+      <h3>Descripción general</h3>
+      <p class="text-muted">
+        Título y resumen que aparecen en la página de tu anuncio.
+      </p>
+    </div>
+
+    <div class="col-md-9">
+      <div>
+        <label>Título</label>
+        <input type="text" name="name" class="form-control title" placeholder="Escribe un título" maxlength="45">
+        <em class="row-space-top-1 h6 text-right">
+          Quedan <span class="ml-error">45</span> caracteres
+        </em>
+      </div>
+
+      <div>
+        <label>Resumen</label>
+        <textarea class="form-control" name="summary" rows="6" placeholder="Escribe un resumen de un máximo de 500 caracteres" maxlength="500"></textarea>
+        <em class="row-space-top-1 h6 text-right">
+          Quedan <span class="">500</span> caracteres
+        </em>
+      </div>
+    </div>
+  </div> <!-- detail-row -->
+
+  <div class="detail-row">
+    <h3 class="col-md-3">
+      Agregar Fotos
+    </h3>
+    <div class="col-md-9 photos">
+      <div class="js-photos-region"></div>
+    </div>
+  </div> <!-- detail-row -->
+
+</div>
+
+<div class="clearfix">
+  <div class="pull-right">
+    <button class="btn btn-warning btn-lg js-backBtn">
+      Volver
+    </button>
+
+    <button class="btn btn-success btn-lg js-publishBtn" disabled="disabled">
+      Publicar
+      <i class="glyphicon glyphicon-ok"></i>
+    </button>
+  </div>
+</div>

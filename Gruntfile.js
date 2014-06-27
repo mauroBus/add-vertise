@@ -31,6 +31,11 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  // Load grunt php task to run the services.
+  // grunt.loadNpmTasks('grunt-php');
+
+  var phpMiddleware = require('connect-php');
+
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -76,9 +81,11 @@ module.exports = function (grunt) {
       less: {
         files: [
           '<%= yeoman.app %>/styles/*.less',
-          '<%= yeoman.app %>/views/*.less',
-          '<%= yeoman.app %>/views/*/styles.less',
-          '<%= yeoman.app %>/widgets/*/styles.less'
+          '<%= yeoman.app %>/views/styles.less',
+          '<%= yeoman.app %>/views/**/styles.less',
+          // '<%= yeoman.app %>/views/*/*/styles.less',
+          // '<%= yeoman.app %>/views/*/*/*/styles.less',
+          '<%= yeoman.app %>/widgets/**/styles.less'
         ],
         tasks: ['less', 'autoprefixer']
       },
@@ -89,6 +96,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
+          // '<%= yeoman.app %>/{,*/}*.less',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
         ]
@@ -107,9 +115,9 @@ module.exports = function (grunt) {
           '.tmp/styles/main.css': [
           '<%= yeoman.app %>/styles/*.less',
           '<%= yeoman.app %>/views/*.less',
-          '<%= yeoman.app %>/views/*/*.less',
+          '<%= yeoman.app %>/views/**/*.less',
           '<%= yeoman.app %>/widgets/*.less',
-          '<%= yeoman.app %>/widgets/*/*.less'
+          '<%= yeoman.app %>/widgets/**/*.less'
           ]//'.tmp/styles/main.less'
           // '<%= yeoman.tmp %>/css/unprefixed.main.css': '<%= yeoman.app %>/assets/less/application.less'
         }
@@ -122,7 +130,27 @@ module.exports = function (grunt) {
         port: 9000,
         livereload: 35729,
         // Change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        hostname: 'localhost',
+        middleware: function(connect, options) {
+          // Same as in grunt-contrib-connect
+          var middlewares = [];
+          var directory = options.directory ||
+            options.base[options.base.length - 1];
+          if (!Array.isArray(options.base)) {
+            options.base = [options.base];
+          }
+
+          // Here comes the PHP middleware
+          middlewares.push(phpMiddleware(directory));
+
+            // Same as in grunt-contrib-connect
+          options.base.forEach(function(base) {
+            middlewares.push(connect.static(base));
+          });
+
+          middlewares.push(connect.directory(directory));
+          return middlewares;
+        }
       },
       livereload: {
         options: {
@@ -135,7 +163,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
-          port: 9001,
+          port: 9000,
           base: [
             '.tmp',
             'test',
@@ -377,6 +405,14 @@ module.exports = function (grunt) {
         ]
         // cwd: '<%= yeoman.dist %>/fonts',
 
+      },
+      services: {
+        files: [
+          {
+            dest: '<%= yeoman.dist %>/services/',
+            src: '<%= yeoman.app %>/services/*'
+          }
+        ]
       }
       // styles: {
       //     expand: true,
@@ -407,13 +443,15 @@ module.exports = function (grunt) {
         // 'compass:server',
         'less', // less to css
         // 'copy:styles',
-        'copy:imgs'
+        'copy:imgs',
+        'copy:services'
       ],
       test: [
         // 'copy:styles'
       ],
       dist: [
         'copy:imgs',
+        'copy:services',
         // 'compass',
         'less', // less to css
         // 'copy:styles',
@@ -444,6 +482,21 @@ module.exports = function (grunt) {
         }
       }
     }
+
+    // I had port conflicts to use this task (grunt-php). So, I'm using "connect-php" instead.
+    // php: {
+    //   dist: {
+    //     options: {
+    //       bin: 'C:/xampp/php/php.exe',
+    //       port: 9000,
+    //       // router: 'router.php',
+    //       base: './app/services',
+    //       // open: true,
+    //       keepalive: true
+    //     }
+    //   }
+    // }
+
   }); // end of grunt.initConfig
 
 
@@ -491,6 +544,7 @@ module.exports = function (grunt) {
     'requirejs',
     'uglify',
     'copy:dist',
+    'copy:services',
     'modernizr',
     'rev',
     'usemin',

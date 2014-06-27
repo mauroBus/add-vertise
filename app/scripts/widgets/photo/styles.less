@@ -1,0 +1,50 @@
+@linkColor: #08c;
+
+.photo-widget {
+  .panel();
+  .panel-default();
+  .clearfix();
+
+  float: left;
+  width: 30%;
+  height: 165px;
+
+  padding: 15px;
+  margin-left: 1%;
+
+  .absolute-wrapper {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .photo {
+    width: 200px;
+    height: 134px;
+  }
+
+  .loading {
+    position: absolute;
+    left: 41%;
+    top: 36%;
+    z-index: 5;
+  }
+
+  .delete-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    opacity: 0.8;
+    z-index: 10;
+  }
+
+  .photo-name {
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &:hover {
+    border-color: @linkColor;
+  }
+}

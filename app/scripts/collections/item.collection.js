@@ -3,10 +3,10 @@ define([
     'models/item.model',
     'helpers/url'
   ],
-  function(BackbonePaginator, AdvertiseModel, Url) {
+  function(BackbonePaginator, ItemModel, Url) {
 
     var ItemCollection = Backbone.Paginator.requestPager.extend({
-      model: AdvertiseModel,
+      model: ItemModel,
 
       // url: Url['advertises'],
 

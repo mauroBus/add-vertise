@@ -1,8 +1,8 @@
-define([
-    'backbone',
-    'helpers/url'
+define(
+  [
+    'backbone'
   ],
-  function(Backbone, Url) {
+  function(Backbone) {
 
     var ItemModel = Backbone.Model.extend({
       defaults: {

@@ -1,0 +1,56 @@
+<div class="attribute clearfix category">
+  <h2 class="left attribute-name col-md-3 text-right">Categoria</h2>
+  <div class="left attribute-content col-md-9 btn-group btn-group-lg js-category" data-toggle="buttons">
+    <label class="btn btn-success">
+      <input type="radio" name="options" id="categoryProperty"> Inmuebles
+    </label>
+    <label class="btn btn-success">
+      <input type="radio" name="options" id="categoryVehicle"> Vehiculos
+    </label>
+    <label class="btn btn-success">
+      <input type="radio" name="options" id="categoryOther"> Otro
+    </label>
+  </div>
+</div> <!--  -->
+
+
+<div class="attribute clearfix place">
+  <h2 class="left attribute-name col-md-3 text-right">Lugar</h2>
+  <div class="js-place-region attribute-content col-md-9 place-region"></div>
+  <div class="place-selection js-placeSelection">
+    <span class="glyphicon glyphicon-map-marker"></span>
+    <span class="js-placeSelectionName"></span>
+    <button type="button" class="btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-pencil js-placeEdit"></span>
+    </button>
+  </div>
+</div> <!--  -->
+
+<div class="attribute clearfix capacity">
+  <h2 class="left attribute-name col-md-3 text-right">Capacidad</h2>
+  <!-- <div class="left capacity-select btn-group btn-input clearfix js-capacitySelect">
+    <button type="button" class="btn btn-default dropdown-toggle form-control" data-toggle="dropdown">
+      <span class="js-capacitySelectTxt" data-bind="label">Select One</span>&nbsp;<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <% _.each(possibleCapacities, function(capacity) { %>
+        <li>
+          <a href="javascrip:void();"><%= capacity %></a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>  btn-group -->
+
+  <select class="form-control attribute-content col-md-9 js-capacitySelectTxt">
+    <% _.each(possibleCapacities, function(capacity) { %>
+      <option><%= capacity %></option>
+    <% }) %>
+  </select>
+</div> <!--  -->
+
+<div class="attribute clearfix continue">
+  <button type="submit" class="btn btn-primary btn-lg js-continueBtn">
+    Continuar
+    <i class="icon icon-ok"></i>
+  </button>
+</div>

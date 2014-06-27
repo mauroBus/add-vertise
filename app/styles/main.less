@@ -1,7 +1,25 @@
-// application styles
+//
+// LIBS:
+//
+// Bootstrap:
+@import "../bower_components/bootstrap/less/bootstrap.less";
+// jquery-ui:
+// @import "../bower_components/jquery-ui/themes/dark-hive/jquery-ui.css";
+// NProgress:
+// @import "../bower_components/nprogress/nprogress.css";
+
+
+// variables:
+@import "./variables.less";
+// application styles:
 @import "./app.less";
 
-// VIEWS IMPORTS
+
+
+
+//
+// VIEWS IMPORTS:
+//
 @import "../scripts/views/404-not-found/styles.less";
 @import "../scripts/views/home/styles.less";
 @import "../scripts/views/item/styles.less";
@@ -14,18 +32,23 @@
 @import "../scripts/views/main-list/main-content/styles.less";
 @import "../scripts/views/main-list/main-content/sidebar/styles.less";
 @import "../scripts/views/main-list/main-content/item-list/styles.less";
+// login view:
+@import "../scripts/views/login/styles.less";
+// loading view:
+@import "../scripts/views/loading/styles.less";
+// new-item view:
+@import "../scripts/views/new-item/styles.less";
+@import "../scripts/views/new-item/start-creation/styles.less";
+@import "../scripts/views/new-item/add-details/styles.less";
+@import "../scripts/views/new-item/add-details/photos/styles.less";
 
 
-// WIDGETS IMPORTS
+//
+// WIDGETS IMPORTS:
+//
 @import "../scripts/widgets/carousel/styles.less";
 @import "../scripts/widgets/places-autocomplete/styles.less";
 @import "../scripts/widgets/search/styles.less";
 @import "../scripts/widgets/gmap/styles.less";
 @import "../scripts/widgets/tabs/styles.less";
-
-
-// Bootstrap:
-@import "../bower_components/bootstrap/less/bootstrap.less";
-
-// jquery-ui
-@import "../bower_components/jquery-ui/themes/dark-hive/jquery-ui.css";
+@import "../scripts/widgets/photo/styles.less";

@@ -20,7 +20,8 @@ define([
         bedrooms: 0,
         bathrooms: 0,
         minimumStay: 0,
-        cleaningFeePrice: 0
+        cleaningFeePrice: 0,
+        possibleCapacities: ['1', '2', '3', '4', '5', '6', '7', '8+']
       },
 
       url: Url['itemDetails'],

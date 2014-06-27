@@ -2,6 +2,8 @@ require.config({
 
   paths: {
     'jquery': '../bower_components/jquery/jquery',
+    'jquery.cookie': '../bower_components/jquery.cookie/jquery.cookie',
+
     'underscore': '../bower_components/underscore/underscore',
 
     // backbone:
@@ -9,6 +11,7 @@ require.config({
     'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
     'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
     'backbone.paginator': '../bower_components/backbone.paginator/lib/backbone.paginator',
+    'backbone.validation': '../bower_components/backbone.validation/dist/backbone-validation-amd',
 
     // marionette:
     'marionette': '../bower_components/marionette/lib/core/amd/backbone.marionette',
@@ -22,6 +25,9 @@ require.config({
     'async': '../bower_components/requirejs-plugins/src/async',
 
     'jquery-ui': '../bower_components/jquery-ui/ui/jquery-ui',
+    'jquery-ui.effect': '../bower_components/jquery-ui/ui/jquery.ui.effect',
+    'jquery.ui.effect-fade': '../bower_components/jquery-ui/ui/jquery.ui.effect-fade',
+
     'jquery-ui.menu': '../bower_components/jquery-ui/ui/jquery.ui.menu',
     'jquery-ui.widget': '../bower_components/jquery-ui/ui/jquery.ui.widget',
     'autocomplete': '../bower_components/jquery-ui/ui/jquery.ui.autocomplete',
@@ -38,6 +44,17 @@ require.config({
     jquery: {
       exports: '$'
     },
+    'jquery.cookie': {
+      deps: ['jquery']
+    },
+    'jquery-ui': {
+      deps: ['jquery'],
+      exports: 'jQuiryUI'
+    },
+    'jquery.ui.effect-fade': {
+      deps: ['jquery-ui.effect'],
+      exports: 'jQueryFadeFx'
+    },
     underscore: {
       exports: '_'
     },
@@ -48,6 +65,9 @@ require.config({
     'backbone.paginator': {
       deps: ['backbone', 'underscore', 'jquery'],
       exports: 'Backbone.Paginator'
+    },
+    'backbone.validation': {
+      deps: ['backbone']
     },
     marionette: {
       deps: ['backbone']
@@ -71,7 +91,7 @@ require.config({
   }
 });
 
-require(['app'], function(app) {
+require(['backbone.validation', 'app'], function(BackboneValidation, app) {
   'use strict';
 
   // app.on('initialize:before', function() {

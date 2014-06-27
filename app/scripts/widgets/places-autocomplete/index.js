@@ -17,6 +17,12 @@ define([
 
     autocompleteAPI: null,
 
+    serializeData: function() {
+      return {
+        placeholder: this.options.placeholder || '¿A dónde quieres ir?'
+      };
+    },
+
     onRender: function() {
       var input = this.ui.locationInput[0];
       var options = {
@@ -27,6 +33,14 @@ define([
       };
 
       this.autocompleteAPI = new google.maps.places.Autocomplete(input, options);
+
+      if (this.options.selectCbk) {
+        var that = this;
+
+        google.maps.event.addListener(this.autocompleteAPI, 'place_changed', function() {
+            that.options.selectCbk(this.getPlace());
+        });
+      }
     },
 
     getLocation: function() {
